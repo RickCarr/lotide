@@ -1,18 +1,35 @@
-const eqArrays = function(arrayA, arrayB) {
-  const reset = "\x1b[0m";
-  const fgRed = "\x1b[31m";
-  const fgGreen = "\x1b[32m";
-  let result = true;  //set default to true
-  if (arrayA.length !== arrayB.length) result = false; //fails if arrays are diff lengths
-  for (let index = 0; index < arrayA.length; index++) { 
-    if (arrayA[index] !== arrayB[index]) result = false; //fails if any index of the arrays don't match
+const assertEqual = function(actual, expected) {
+  if (actual === expected) {
+    console.log(`😎 Assertion Passed 😎: ${actual} === ${expected}`);
+  } else {
+    console.log(`😞 Assertion Failed 😞: ${actual} !== ${expected}`);
   }
-  result === true ? console.log(`😎 Arrays Match!! 😎: \n ${fgGreen} ${arrayA} === ${arrayB} ${reset}`)
-    : console.log(`😞 Arrays Don't Match!! 😞: \n ${fgRed} ${arrayA} === ${arrayB} ${reset}`);
 };
+
+const eqArrays = function(arrayA, arrayB) {
+  if (arrayA.length !== arrayB.length) {
+    return false;
+  }
+
+  for (let index = 0; index < arrayA.length; index++) {
+    if (arrayA[index] !== arrayB[index]) {
+      return false;
+    }
+  }
+  return true;
+};
+
+const assertArraysEqual = function(arr1, arr2) {
+  const actual = eqArrays(arr1, arr2);
+  assertEqual(actual, true);
+};
+
 //assertions listed below
 const apple = "this is an apple";
-eqArrays([1, 2, 3], [1, 2, 3]); //true
-eqArrays(["banana", 2, apple], ["banana", 2, apple]); //true
-eqArrays(["banana", 2, apple],["banana", 2, "apple"]); //false
-eqArrays(["banana", 2, apple],["banana", 3, "this is an apple"]); //false
+assertArraysEqual([1, 2, 3], [1, 2, 3]); //true
+assertArraysEqual(["banana", 2, apple], ["banana", 2, apple]); //true
+assertArraysEqual(["banana", 2, apple], ["banana", 2, "apple"]); //false
+assertArraysEqual(["banana", 2, apple], ["banana", 3, "this is an apple"]); //false
+
+// result === true ? console.log(`😎 Arrays Match!! 😎: \n ${fgGreen} ${arrayA} === ${arrayB} ${reset}`)
+// : console.log(`😞 Arrays Don't Match!! 😞: \n ${arrayA} === ${arrayB} ${reset}`);
