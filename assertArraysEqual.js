@@ -8,7 +8,7 @@ const eqArrays = function(arrayA, arrayB) {
     if (arrayA[i] !== arrayB[i]) result = false; //fails if any index of the arrays don't match
   }
   result === true ? console.log(`😎 Great Success!! 😎: \n ` + fgGreen, `${arrayA} === ${arrayB}`, reset)
-    : console.tabl(`😞 Failure Detected!! 😞: \n` + fgRed, `${arrayA} === ${arrayB}`, reset);
+    : console.log(`😞 Failure Detected!! 😞: \n` + fgRed, `${arrayA} === ${arrayB}`, reset);
 };
 //assertions listed below
 const apple = "this is an apple";
