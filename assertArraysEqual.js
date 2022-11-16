@@ -4,8 +4,8 @@ const eqArrays = function(arrayA, arrayB) {
   const fgGreen = "\x1b[32m";
   let result = true;  //set default to true
   if (arrayA.length !== arrayB.length) result = false; //fails if arrays are diff lengths
-  for (let i = 0; i < arrayA.length; i++) { //loops index for aligned length
-    if (arrayA[i] !== arrayB[i]) result = false; //fails if any index of the arrays don't match
+  for (let index = 0; index < arrayA.length; index++) { 
+    if (arrayA[index] !== arrayB[index]) result = false; //fails if any index of the arrays don't match
   }
   result === true ? console.log(`😎 Great Success!! 😎: \n ` + fgGreen, `${arrayA} === ${arrayB}`, reset)
     : console.log(`😞 Failure Detected!! 😞: \n` + fgRed, `${arrayA} === ${arrayB}`, reset);
