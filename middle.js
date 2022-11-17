@@ -26,18 +26,19 @@ const assertArraysEqual = function(arr1, arr2) {
 
 const middle = function(array) {
   let newArray = [];
-  if (array.length < 3) {
+  if (array.length < 2) {
     return newArray;
   }
   for (let arr of array) {
     newArray.push(arr);
   }
-  for (let i = 2; i < newArray.length; i++) {
+  for (let i = 0; i < newArray.length; i++) {
     newArray.pop();
     newArray.shift();
   }
   return newArray;
 };
-
-assertArraysEqual((middle([1, 2, 3, 4])), [2, 3]);
+assertArraysEqual(middle([1]), [])
+assertArraysEqual(middle([1, 2]), [])
+assertArraysEqual((middle([1,2,3])), [2]);
 assertArraysEqual((middle([1, 2, 3, 4, 5, 6])), [3, 4]);
