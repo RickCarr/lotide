@@ -44,4 +44,4 @@ const words = ["hello", "world", "lighthouse"];
 assertArraysEqual(without(["this", "is", "a", "test"], ["is", "a"]), ["this", "test"]);
 assertArraysEqual(without(words, ["lighthouse"]), ["hello", "world"]);
 assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
-assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]) , ["1", "2"])
+assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]) , ["1", "2"]);

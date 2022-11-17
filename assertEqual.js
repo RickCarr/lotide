@@ -10,9 +10,12 @@ assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
 
 // const eqArrays = function(arrayA, arrayB) {
-//   const reset = "\x1b[0m";
-//   const fgRed = "\x1b[31m";
-//   const fgGreen = "\x1b[32m";
+// const colors = {
+//    reset : "\x1b[0m",
+//    fgRed : "\x1b[31m",
+//    fgGreen : "\x1b[32m",
+//   };
+//   
 //   let result = true;  //set default to true
 //   if (arrayA.length !== arrayB.length) result = false; //fails if arrays are diff lengths
 //   for (let index = 0; index < arrayA.length; index++) { 
