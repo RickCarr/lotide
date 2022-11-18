@@ -21,7 +21,7 @@ const eqArrays = function(arrayA, arrayB) {
 
 const assertArraysEqual = function(arr1, arr2) {
   const actual = eqArrays(arr1, arr2);
-  assertEqual(actual, true);
+  actual === true ? console.log(`😎 Arrays Match!! 😎: \n \x1b[32m ${arr1} === ${arr2} \x1b[0m`) :console.log(`😞 Arrays Don't Match!! 😞: \n  \x1b[31m ${arr1} !== \x1b[32m ${arr2} \x1b[0m`);
 };
 
 //assertions listed below
@@ -30,6 +30,3 @@ assertArraysEqual([1, 2, 3], [1, 2, 3]); //true
 assertArraysEqual(["banana", 2, apple], ["banana", 2, apple]); //true
 assertArraysEqual(["banana", 2, apple], ["banana", 2, "apple"]); //false
 assertArraysEqual(["banana", 2, apple], ["banana", 3, "this is an apple"]); //false
-
-// result === true ? console.log(`😎 Arrays Match!! 😎: \n ${fgGreen} ${arrayA} === ${arrayB} ${reset}`)
-// : console.log(`😞 Arrays Don't Match!! 😞: \n ${arrayA} === ${arrayB} ${reset}`);

@@ -1,11 +1,3 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`😎 Assertion Passed 😎: ${actual} === ${expected}`);
-  } else {
-    console.log(`😞 Assertion Failed 😞: ${actual} !== ${expected}`);
-  }
-};
-
 const eqArrays = function(arrayA, arrayB) {
   if (arrayA.length !== arrayB.length) {
     return false;
@@ -21,7 +13,7 @@ const eqArrays = function(arrayA, arrayB) {
 
 const assertArraysEqual = function(arr1, arr2) {
   const actual = eqArrays(arr1, arr2);
-  assertEqual(actual, true);
+  actual === true ? console.log(`😎 Arrays Match!! 😎: \n \x1b[32m ${arr1} === ${arr2} \x1b[0m`) : console.log(`😞 Arrays Don't Match!! 😞: \n  \x1b[31m ${arr1} !== \x1b[32m ${arr2} \x1b[0m`);
 };
 
 
@@ -36,7 +28,6 @@ const letterPositions = function(string) {
       }
     }
   }
-  console.log(results);
   return results;
 };
 const actual = (letterPositions("hello"));

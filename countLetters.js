@@ -1,8 +1,8 @@
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
-    console.log(`😎 Assertion Passed 😎: ${actual} === ${expected}`);
+    console.log(`😎 Assertion Passed 😎: \x1b[32m ${actual}  === ${expected} \x1b[0m`);
   } else {
-    console.log(`😞 Assertion Failed 😞: ${actual} !== ${expected}`);
+    console.log(`😞 Assertion Failed 😞: \x1b[31m ${actual} !== \x1b[32m ${expected} \x1b[0m`);
   }
 };
 
@@ -20,7 +20,6 @@ const countLetters = function(string) {
   return results;
 };
 
-console.log(countLetters("lighthouse in the house"));
 const result1 = (countLetters("lighthouse in the house"));
 assertEqual(result1["l"], 1);
 assertEqual(result1["i"], 2);
