@@ -1,9 +1,6 @@
 const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`😎 Assertion Passed 😎: \x1b[32m ${actual}  === ${expected} \x1b[0m`);
-  } else {
-    console.log(`😞 Assertion Failed 😞: \x1b[31m ${actual} !== \x1b[32m ${expected} \x1b[0m`);
-  }
+  actual === expected ? console.log(`😎 Assertion Passed 😎: \x1b[32m ${actual}  === ${expected} \x1b[0m`) :
+  console.log(`😞 Assertion Failed 😞: \x1b[31m ${actual} !== \x1b[32m ${expected} \x1b[0m`);
 };
 
 assertEqual("Lighthouse Labs", "Bootcamp");
