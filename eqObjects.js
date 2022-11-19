@@ -20,8 +20,8 @@ const eqArrays = function(arrayA, arrayB) {
 };
 
 const eqObjects = function(object1, object2) {
-  const keyRing1 = Object.keys(object1).sort();
-  const keyRing2 = Object.keys(object2).sort();
+  const keyRing1 = Object.keys(object1);
+  const keyRing2 = Object.keys(object2);
   if (keyRing1.length !== keyRing2.length) {
     return false;
   }
