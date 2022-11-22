@@ -33,7 +33,7 @@ const eqObjects = function(object1, object2) {
     } else if (key1 !== key2) {
       return false;
     }
-  } 
+  }
   return true;
 };
 

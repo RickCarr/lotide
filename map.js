@@ -37,4 +37,4 @@ const mapped4 = map(words, word => (words[3]));
 assertArraysEqual(mapped1, ["hey!", "dumb!", "tralala!", "close!", "to!", "the!", "edit!"]);
 assertArraysEqual(mapped2, words);
 assertArraysEqual(mapped3, ["Paranoimia", "Paranoimia", "Paranoimia", "Paranoimia", "Paranoimia", "Paranoimia", "Paranoimia"]);
-assertArraysEqual(mapped4, `${words[4]} ${words[5]} ${words[6]}`); //this should fail for 
+assertArraysEqual(mapped4, `${words[4]} ${words[5]} ${words[6]}`); //this should fail for
