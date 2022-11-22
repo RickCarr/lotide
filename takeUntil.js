@@ -12,7 +12,8 @@ const eqArrays = function(arrayA, arrayB) {
 
 const assertArraysEqual = function(arr1, arr2) {
   const actual = eqArrays(arr1, arr2);
-  actual === true ? console.log(`😎 Arrays Match!! 😎: \n \x1b[32m ${arr1} === ${arr2} \x1b[0m`) : console.log(`😞 Arrays Don't Match!! 😞: \n  \x1b[31m ${arr1} !== \x1b[32m ${arr2} \x1b[0m`);
+  actual === true ? console.log(`😎 Arrays Match!! 😎: \n \x1b[32m ${arr1} === ${arr2} \x1b[0m`) :
+    console.log(`😞 Arrays Don't Match!! 😞: \n  \x1b[31m ${arr1} !== \x1b[1m\x5b[1m\x1b[32m ${arr2} \x1b[0m`);
 };
 
 const takeUntil = function(array, callback) {
@@ -40,3 +41,5 @@ console.log(results2);
 assertArraysEqual(results1, [1, 2, 5, 7, 2]);
 assertArraysEqual(results2, ['I\'ve', 'been', 'to', 'Hollywood']);
 assertArraysEqual(results2, ['I\'ve', 'never', 'been', 'to', 'Hollywood']); // to show fail.
+
+module.exports = takeUntil;

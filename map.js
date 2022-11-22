@@ -38,3 +38,5 @@ assertArraysEqual(mapped1, ["hey!", "dumb!", "tralala!", "close!", "to!", "the!"
 assertArraysEqual(mapped2, words);
 assertArraysEqual(mapped3, ["Paranoimia", "Paranoimia", "Paranoimia", "Paranoimia", "Paranoimia", "Paranoimia", "Paranoimia"]);
 assertArraysEqual(mapped4, `${words[4]} ${words[5]} ${words[6]}`); //this should fail for
+
+module.exports = map;

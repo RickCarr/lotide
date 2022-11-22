@@ -13,7 +13,8 @@ const eqArrays = function(arrayA, arrayB) {
 
 const assertArraysEqual = function(arr1, arr2) {
   const actual = eqArrays(arr1, arr2);
-  actual === true ? console.log(`😎 Arrays Match!! 😎: \n \x1b[32m" ${arr1} " === ${arr2} \x1b[0m`) : console.log(`😞 Arrays Don't Match!! 😞: \n  \x1b[31m ${arr1} !== \x1b[32m ${arr2} \x1b[0m`);
+  actual === true ? console.log(`😎 Arrays Match!! 😎: \n \x1b[32m" ${arr1} " === ${arr2} \x1b[0m`) :
+    console.log(`😞 Arrays Don't Match!! 😞: \n  \x1b[31m ${arr1} !== \x1b[1m\x1b[5m\x1b[32m${arr2} \x1b[0m`);
 };
 
 const without = function(source, itemsToRemove) {
@@ -36,4 +37,6 @@ const words = ["hello", "world", "lighthouse"];
 assertArraysEqual(without(["this", "is", "a", "test"], ["is", "a"]), ["this", "test"]);
 assertArraysEqual(without(words, ["lighthouse"]), ["hello", "world"]);
 assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
-assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]) , ["1", "2"]);
+assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
+
+module.exports = without;

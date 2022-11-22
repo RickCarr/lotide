@@ -13,7 +13,8 @@ const eqArrays = function(arrayA, arrayB) {
 
 const assertArraysEqual = function(arr1, arr2) {
   const actual = eqArrays(arr1, arr2);
-  actual === true ? console.log(`😎 Arrays Match!! 😎: \n \x1b[32m ${arr1} === ${arr2} \x1b[0m`) : console.log(`😞 Arrays Don't Match!! 😞: \n  \x1b[31m ${arr1} !== \x1b[32m ${arr2} \x1b[0m`);
+  actual === true ? console.log(`😎 Arrays Match!! 😎: \n \x1b[32m ${arr1} === ${arr2} \x1b[0m`) :
+    console.log(`😞 Arrays Don't Match!! 😞: \n  \x1b[31m ${arr1} !== \x1b[1m\x1b[5m\x1b[32m ${arr2} \x1b[0m`);
 };
 
 
@@ -36,3 +37,4 @@ assertArraysEqual(actual["e"], [1]);
 assertArraysEqual(actual["l"], [2, 3]);
 assertArraysEqual(actual["o"], [4]);
 
+module.exports = letterPositions;

@@ -2,7 +2,7 @@ const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`😎 Assertion Passed 😎: \x1b[32m ${actual}  === ${expected} \x1b[0m`);
   } else {
-    console.log(`😞 Assertion Failed 😞: \x1b[31m ${actual} !== \x1b[32m ${expected} \x1b[0m`);
+    console.log(`😞 Assertion Failed 😞: \x1b[31m ${actual} !== \x1b[1m\x1b[5m\x1b[32m ${expected} \x1b[0m`);
   }
 };
 
@@ -25,3 +25,5 @@ assertEqual(result1["l"], 1);
 assertEqual(result1["i"], 2);
 assertEqual(result1["g"], 99/*fail*/);
 assertEqual(result1["z"], undefined);
+
+module.exports = countLetters;

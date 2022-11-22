@@ -35,7 +35,7 @@ const assertObjectsEqual = function(actual, expected) {
   const obj1 = inspect(actual);
   const obj2 = inspect(expected);
   eqObjects(actual, expected) ? console.log(`😎 Objects Match!! 😎: \n \x1b[32m ${obj1} === ${obj2} \x1b[0m`) :
-    console.log(`😞 Objects Don't Match!! 😞: \n  \x1b[31m ${obj1} !== \x1b[32m ${obj2} \x1b[0m`);
+    console.log(`😞 Objects Don't Match!! 😞: \n \x1b[31m ${obj1} !== \x1b[1m\x1b[5m\x1b[32m ${obj2} \x1b[0m`);
 };
 
 const ab = { a: "1", b: "2" };
@@ -48,3 +48,5 @@ assertObjectsEqual(ab, ba); //true
 assertObjectsEqual(ab, abc); //false
 assertObjectsEqual(cd, dc); //true
 assertObjectsEqual(cd, cd2); //false
+
+module.exports = assertObjectsEqual;
