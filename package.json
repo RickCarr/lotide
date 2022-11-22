@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@rickcarr/lotide",
   "version": "1.0.0",
-  "description": "RickCarr LHL lotide project",
+  "description": "my LHL lotide project",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/RickCarr/lotide.git"
   },
-  "author": "",
+  "author": "rickcarr",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/RickCarr/lotide/issues"
